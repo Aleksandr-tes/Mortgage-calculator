@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous"> -->
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+
+    <header class="header"></header> 
+
+    <div class="container">
+        <div class="bg-top">навигация </div>
+
+        <div class="breadcrumbs">
+            <a href="#">Главная ></a> 
+            <a href="#">Для вас ></a> 
+            <a href="#">Кредиты ></a> 
+            <a href="#">Ипотечныей калькулятор</a> 
+        </div>
+
+    </div>
+
+    <div class="container container-ogr">
+      <h2 class="title-h2">Ипотечный калькулятор</h2>
+
+      <div class="calculator">
+        <div class="calculator__left">
+          <div class="calculator__left-top">
+              <div class="calculator__left-top-text">
+                Валюта
+              </div>
+              <div class="calculator__left-top-btn_grup">
+                <button class="left-top-btn left-top-btn__active" onclick="btnDoll()">Доллар <span>США</span></button>
+                <button class="left-top-btn" onclick="btnRup()">Руб <span>ПМР</span></button>
+              </div>
+          </div>
+
+          <div class="calculator__left-val calculator__left-val_active" id="valDoll">
+
+            <div class="calculator__left-val_item">
+              <h2>Стоимость <br>приобретаемого жилья </h2>
+              <input type="number" value="0">
+              <p>Доллар <span>США</span></p>
+            </div>
+
+            <div class="calculator__left-val_item">
+              <h2>Первоначальный<br>взнос </h2>
+              <input type="number" value="0">
+              <p>Доллар <span>США</span></p>
+            </div>
+
+            <div class="calculator__left-val_item">
+              <h2>На срок</h2>
+              <input type="number" value="0">
+              <p>месяцов</p>
+            </div>
+
+          </div>
+
+          <!-- скрыт -->
+          <div class="calculator__left-val" id="valRup">
+
+            <div class="calculator__left-val_item">
+              <h2>Стоимость <br>приобретаемого жилья </h2>
+              <input type="number" value="0">
+              <p>Руб <span>ПМР</span></p>
+            </div>
+
+            <div class="calculator__left-val_item">
+              <h2>Первоначальный<br>взнос </h2>
+              <input type="number" value="0">
+              <p>Руб <span>ПМР</span></p>
+            </div>
+
+            <div class="calculator__left-val_item">
+              <h2>На срок</h2>
+              <input type="number" value="0">
+              <p>месяцов</p>
+            </div>
+
+          </div>
+          <button class="calculator__left-val_btn">Подобрать</button>
+        </div>
+        
+          <!-- ////////// правая колонка ////////// -->
+          <div class="calculator__right">
+
+            <!-- ----------- это т блок должен срыватся --------------->
+            <div class="calculator__right-block calculator__right-block_hidden-1 ">
+              <div class="calculator__right-btn_grup ">
+                <button class="calculator__right-btn calculator__right-btn_active">Да</button> 
+                <button class="calculator__right-btn">Нет</button>
+              </div>
+              <p>Работаю в бюджетной сфере</p>
+            </div>
+            <!-- ----------- этот блок должен срыватся  конец --------------->
+
+            <!-- // блок скрыт при клеке должен отображаться  -->
+            <div class="calculator__right-block_hidden"> 
+
+              <div class="calculator__right-block">
+                <div class="calculator__right-btn_grup ">
+                  <button class="calculator__right-btn calculator__right-btn_active">Да</button> 
+                  <button class="calculator__right-btn">Нет</button>
+                </div>
+                <p>Работаю в бюджетной сфере</p>
+              </div>
+
+              <div class="calculator__right-block">
+                <div class="calculator__right-btn_grup ">
+                  <button class="calculator__right-btn calculator__right-btn_active">Да</button> 
+                  <button class="calculator__right-btn">Нет</button>
+                </div>
+                <p>У меня есть сертификат на субсидию</p>
+                <span class="prompt" onclick="questionOne()">?</span>
+              </div>
+  
+              <div class="calculator__right-block calculator__right-block_rote">
+                <p class="calculator__right-block_st"><b>Номинал <br> сертификата</b></p>
+                <button class="right-btn-prise right-btn-prise_active">161 000 <span>RUP</span></button>
+                <button class="right-btn-prise">193 200 <span>RUP</span></button>
+                <button class="right-btn-prise">225 400 <span>RUP</span></button>
+              </div>
+  
+              <div class="calculator__right-block">
+                <div class="calculator__right-btn_grup ">
+                  <button class="calculator__right-btn calculator__right-btn_active">Да</button> 
+                  <button class="calculator__right-btn">Нет</button>
+                </div>
+                <p>Работаю в организации естественных монополий</p>
+                <span class="prompt" onclick="questionTwo()">?</span>
+              </div>
+  
+              <div class="calculator__right-block">
+                <div class="calculator__right-btn_grup ">
+                  <button class="calculator__right-btn calculator__right-btn_active">Да</button> 
+                  <button class="calculator__right-btn">Нет</button>
+                </div>
+                <p>Получаю доходы на счет в Эксимбанке</p>
+              </div>
+  
+              <div class="calculator__right-block">
+                <div class="calculator__right-btn_grup ">
+                  <button class="calculator__right-btn calculator__right-btn_active">Да</button> 
+                  <button class="calculator__right-btn">Нет</button>
+                </div>
+                <p>Получаю доходы в Приднестровье</p>
+              </div>
+                <!-- при ховере появляется -->
+              <div class="calculator__right-block_hover-1" id="clueOne">
+                <ul>
+                  <li><span>ГУП «Единые ЕРЭС»</span></li>
+                  <li><span>МГУП «Тирастеплоэнерго»</span></li>
+                  <li><span> ГУП «Водоснабжение и водоотведение» </span></li>
+                  <li><span>ГУП «ГК Днестрэнерго»</span></li>
+                  <li><span>ГУП «Дубоссарская ГЭС»</span></li>
+                </ul>
+              </div>
+
+              <div class="calculator__right-block_hover-2" id="clueTwo">
+                <ul>
+                  <li><span>ГУП «Единые ЕРЭС»</span></li>
+                  <li><span>МГУП «Тирастеплоэнерго»</span></li>
+                  <li><span>ГУП «Водоснабжение и водоотведение»</span></li>
+                  <li><span>ГУП «ГК Днестрэнерго»</span></li>
+                  <li><span>ГУП «Дубоссарская ГЭС»</span></li>
+                </ul>
+              </div>
+
+            </div>
+            <!-- // конец блока скрытого  при клеке должен отображаться ///// -->
+          </div>
+      </div>
+    </div>
+
+      <!-- </div> -->
+
+      <section class="mortgage">
+        <div class="container container-mortgage">
+          <div class="mortgage-block">
+
+            <div class="mortgage-block__item">
+              <h2 class="underlined-h2">Ипотека с субсидией</h2>
+              <hr class="underlined-hr">
+              <ul>
+                <li><span><b>Ежемесячный платеж (Ваш): 475,18 RUP</b></span></li>
+                <li><span><b>Ежемесячный платеж (Государства): 939,17 RUP</b></span></li>
+                <li><span>Сумма кредита: 107 025 RUP</span></li>
+                <li><span>Первоначальный взноc: 8 175 RUP</span></li>
+                <li><span>Срок: 120 месяцев</span></li>
+                <li><span>Стоимость кредита: 5,9% в год</span></li>
+                <li><span>Необходимый доход: 6 800.00 RUP/мес.</span></li>
+              </ul>  
+              <p>Важно! Необходим сертификат от Вашего ведомства</p>          
+            </div>
+
+            <div class="mortgage-block__item">
+              <h2 class="underlined-h2">Льготная ипотека</h2>
+              <hr class="underlined-hr">
+              <ul>
+                <li><span><b>Ежемесячный платеж: 2287 RUP</b></span></li>
+                <li><span>Сумма кредита: 165 000 RUPP</span></li>
+                <li><span>Первоначальный взноc: 49 500 RUP</span></li>
+                <li><span>Срок: 120 месяцев</span></li>
+                <li><span>Стоимость кредита: 6,2% в год</span></li>
+                <li><span>Необходимый доход: 7 000.00 RUP/мес.</span></li>
+              </ul>      
+            </div>
+
+            <div class="mortgage-block__item">
+              <h2 class="underlined-h2">Льготная ипотека</h2>
+              <hr class="underlined-hr">
+              <ul>
+                <li><span><b>Ежемесячный платеж: 2287 RUP</b></span></li>
+                <li><span>Сумма кредита: 165 000 RUPP</span></li>
+                <li><span>Первоначальный взноc: 49 500 RUP</span></li>
+                <li><span>Срок: 120 месяцев</span></li>
+                <li><span>Стоимость кредита: 6,2% в год</span></li>
+                <li><span>Необходимый доход: 7 000.00 RUP/мес.</span></li>
+              </ul> 
+              <p>Переведите доходы в Эксимбанк и <br>
+                данное предложение будет Вам доступно.
+                </p>     
+            </div>
+
+            <div class="mortgage-block__item">
+              <h2 class="underlined-h2">Ипотека (выплаты в ПМР)</h2>
+              <hr class="underlined-hr">
+              <ul>
+                <li><span><b>Ежемесячный платеж: 156 USD</b></span></li>
+                <li><span>Сумма кредита: 10 000 USD</span></li>
+                <li><span>Первоначальный взноc: 3 000 USD</span></li>
+                <li><span>Срок: 120 месяцев</span></li>
+                <li><span>Стоимость кредита: 8,6% в год</span></li>
+                <li><span>Необходимый доход: 7 500.00 RUP/мес.</span></li>
+              </ul>        
+            </div>
+
+            <div class="mortgage-block__item">
+              <h2 class="underlined-h2">Ипотека (доходы за пределами ПМР)</h2>
+              <hr class="underlined-hr">
+              <ul>
+                <li><span><b>Ежемесячный платеж: 210 USD</b></span></li>
+                <li><span>Сумма кредита: 10 000 USD</span></li>
+                <li><span>Первоначальный взноc: 3 000 USD</span></li>
+                <li><span>Срок: 120 месяцев</span></li>
+                <li><span>Стоимость кредита: 11,6% в год</span></li>
+                <li><span>Необходимый доход: 8 000.00 RUP/мес.</span></li>
+              </ul>       
+            </div>
+
+            <div class="mortgage-block__item">
+              <h2 class="underlined-h2">Ипотека (организации естественных монополий)</h2>
+              <hr class="underlined-hr">
+              <ul>
+                <li><span>Ежемесячный платеж: 135 USD<b></b></span></li>
+                <li><span>Сумма кредита: 10 000 USD</span></li>
+                <li><span>Первоначальный взноc: 3 000 USD</span></li>
+                <li><span>Срок: 120 месяцев</span></li>
+                <li><span>Стоимость кредита: 5,86% в год</span></li>
+                <li><span>Необходимый доход: 7 000.00 RUP</span></li>
+              </ul>  
+              <p>Важно! Необходимо Ходатайство Вашей организации</p>          
+            </div>
+
+            <div class="mortgage-block__item">
+              <h2 class="underlined-h2">Долевое строительство</h2>
+              <hr class="underlined-hr">
+              <ul>
+                <li><span><b>Ежемесячный платеж: 2 173 RUP</b></span></li>
+                <li><span>Сумма кредита: 161 000 RUP</span></li>
+                <li><span>Первоначальный взноc: 24 600 RUP</span></li>
+                <li><span>Срок: 120 месяцев</span></li>
+                <li><span>Стоимость кредита: 6,2% в год</span></li>
+              </ul>  
+              <p>Необходимо уточнить программу строительства!</p>          
+            </div>
+
+          </div>
+        </div>
+
+      </section>
+
+
+
+
+        
+
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha384-nvAa0+6Qg9clwYCGGPpDQLVpLNn0fRaROjHqs13t4Ggj3Ez50XnGQqc/r8MhnRDZ" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
+    <script src="./js/main.js"></script>
+</body>
+</html>

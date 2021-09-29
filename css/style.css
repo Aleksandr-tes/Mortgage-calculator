@@ -1,0 +1,813 @@
+*{
+  margin: 0; 
+  padding: 0;
+  box-sizing: border-box; 
+  color: #000;
+}
+a {
+    text-decoration: none;
+}
+/* ////// */
+@font-face {
+    font-family: 'PF DinDisplay Pro';
+    src: url('../font/PFDinDisplayPro-BoldItalic.eot');
+    src: local('../font/PFDinDisplayPro-BoldItalic'),
+        url('../font/PFDinDisplayPro-BoldItalic.eot?#iefix') format('embedded-opentype'),
+        url('../font/PFDinDisplayPro-BoldItalic.woff') format('woff'),
+        url('../font/PFDinDisplayPro-BoldItalic.ttf') format('truetype');
+    font-weight: bold;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'PF DinDisplay Pro';
+    src: url('../font/PFDinDisplayPro-BlackItalic.eot');
+    src: local('../font/PFDinDisplayPro-BlackItalic'),
+        url('../font/PFDinDisplayPro-BlackItalic.eot?#iefix') format('embedded-opentype'),
+        url('../font/PFDinDisplayPro-BlackItalic.woff') format('woff'),
+        url('../font/PFDinDisplayPro-BlackItalic.ttf') format('truetype');
+    font-weight: 900;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'PF DinDisplay Pro';
+    src: url('../font/PFDinDisplayPro-Thin.eot');
+    src: local('../font/PFDinDisplayPro-Thin'),
+        url('../font/PFDinDisplayPro-Thin.eot?#iefix') format('embedded-opentype'),
+        url('../font/PFDinDisplayPro-Thin.woff') format('woff'),
+        url('../font/PFDinDisplayPro-Thin.ttf') format('truetype');
+    font-weight: 100;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'PF DinDisplay Pro';
+    src: url('../font/PFDinDisplayPro-ThinItalic.eot');
+    src: local('../font/PFDinDisplayPro-ThinItalic'),
+        url('../font/PFDinDisplayPro-ThinItalic.eot?#iefix') format('embedded-opentype'),
+        url('../font/PFDinDisplayPro-ThinItalic.woff') format('woff'),
+        url('../font/PFDinDisplayPro-ThinItalic.ttf') format('truetype');
+    font-weight: 100;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'PF DinDisplay Pro';
+    src: url('../font/PFDinDisplayPro-Italic.eot');
+    src: local('../font/PFDinDisplayPro-Italic'),
+        url('../font/PFDinDisplayPro-Italic.eot?#iefix') format('embedded-opentype'),
+        url('../font/PFDinDisplayPro-Italic.woff') format('woff'),
+        url('../font/PFDinDisplayPro-Italic.ttf') format('truetype');
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'PF DinDisplay Pro';
+    src: url('../font/PFDinDisplayPro-MediumItalic.eot');
+    src: local('../font/PFDinDisplayPro-MediumItalic'),
+        url('../font/PFDinDisplayPro-MediumItalic.eot?#iefix') format('embedded-opentype'),
+        url('../font/PFDinDisplayPro-MediumItalic.woff') format('woff'),
+        url('../font/PFDinDisplayPro-MediumItalic.ttf') format('truetype');
+    font-weight: 500;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'PF DinDisplay Pro';
+    src: url('../font/PFDinDisplayPro-LightItalic.eot');
+    src: local('../font/PFDinDisplayPro-LightItalic'),
+        url('../font/PFDinDisplayPro-LightItalic.eot?#iefix') format('embedded-opentype'),
+        url('../font/PFDinDisplayPro-LightItalic.woff') format('woff'),
+        url('../font/PFDinDisplayPro-LightItalic.ttf') format('truetype');
+    font-weight: 300;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'PF DinDisplay Pro';
+    src: url('../font/PFDinDisplayPro-Black.eot');
+    src: local('../font/PFDinDisplayPro-Black'),
+        url('../font/PFDinDisplayPro-Black.eot?#iefix') format('embedded-opentype'),
+        url('../font/PFDinDisplayPro-Black.woff') format('woff'),
+        url('../font/PFDinDisplayPro-Black.ttf') format('truetype');
+    font-weight: 900;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'PF DinDisplay Pro';
+    src: url('../font/PFDinDisplayPro-Regular.eot');
+    src: local('../font/PFDinDisplayPro-Regular'),
+        url('../font/PFDinDisplayPro-Regular.eot?#iefix') format('embedded-opentype'),
+        url('../font/PFDinDisplayPro-Regular.woff') format('woff'),
+        url('../font/PFDinDisplayPro-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'PF DinDisplay Pro';
+    src: url('../font/PFDinDisplayPro-Light.eot');
+    src: local('../font/PFDinDisplayPro-Light'),
+        url('../font/PFDinDisplayPro-Light.eot?#iefix') format('embedded-opentype'),
+        url('../font/PFDinDisplayPro-Light.woff') format('woff'),
+        url('../font/PFDinDisplayPro-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'PF DinDisplay Pro';
+    src: url('../font/PFDinDisplayPro-Bold.eot');
+    src: local('../font/PFDinDisplayPro-Bold'),
+        url('../font/PFDinDisplayPro-Bold.eot?#iefix') format('embedded-opentype'),
+        url('../font/PFDinDisplayPro-Bold.woff') format('woff'),
+        url('../font/PFDinDisplayPro-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'PF DinDisplay Pro';
+    src: url('../font/PFDinDisplayPro-Medium.eot');
+    src: local('../font/PFDinDisplayPro-Medium'),
+        url('../font/PFDinDisplayPro-Medium.eot?#iefix') format('embedded-opentype'),
+        url('../font/PFDinDisplayPro-Medium.woff') format('woff'),
+        url('../font/PFDinDisplayPro-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+
+
+
+
+
+body {
+    font-family: 'PF DinDisplay Pro', sans-serif, Arial, Helvetica, sans-serif;
+}
+.container {
+    max-width: 1450px !important;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+.header {
+    background: #000;
+    height: 170px;
+}
+.bg-top {
+    height: 135px;
+    background: #ffd200;
+}
+
+.breadcrumbs {
+    margin: 25px 0 0px;
+}
+.breadcrumbs a {
+    color: #888888;
+    font-size: 13px;
+}
+.title-h2 {
+    font-size: 38px;
+    color: #000;
+    margin-top: 15px;
+    margin-bottom: 35px;
+    font-weight: 400;
+}
+
+/* КАЛЬКУЛЯТОР */
+
+.calculator {
+    display: flex;
+    background: #EFF1F1;
+    padding: 28px 40px 34px ;
+    border-radius: 5px; 
+    /* border: crimson 1px solid; */
+    margin-bottom: 46px;
+}
+.calculator__left {
+    border-right: 1px solid #D5D5D5;
+    width: 42%;
+}
+.calculator__left-top {
+    display: flex;
+    /* justify-content: space-between; */
+    margin-bottom: 37px;
+}
+.calculator__left-top-text {
+    width: 238px;
+    font-size: 16px;
+    line-height: 19px;
+   font-weight: normal;
+    align-self: center;
+}
+.calculator__left-top-btn_grup {
+    display: flex;
+    margin-right: 20px;
+}
+.left-top-btn {
+    background: #FFFFFF;
+    border: 1px solid #D9DADA;
+    border-radius: 50px;
+    font-weight: 200;
+    font-size: 16px;
+    line-height: 19px;
+    text-align: center;
+    min-width: 132px;
+    padding: 9px 16px;
+    margin-right: 21px;
+    cursor: pointer;
+    outline: none;
+}
+
+.left-top-btn__active {
+    background: #FFD200;
+    border: 1px solid #FFD200;
+}
+/* val */
+.calculator__left-val_item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 24px;
+}
+.calculator__left-val_item h2 {
+    font-size: 16px;
+    line-height: 19px;
+    font-weight: normal;
+    width: 238px;
+}
+.calculator__left-val_item input {
+    width: 98px;
+    height: 47px;
+    margin-right: 21px;
+    border: 1px solid #D9DADA;
+    border-radius: 5px;
+}
+
+.calculator__left-val_item input[value] {
+    font-size: 16px;
+    line-height: 19px;
+    text-align: center;
+    padding-left: 4px;
+}
+/* для хром  */
+.calculator__left-val_item input[type="number"]::-webkit-outer-spin-button,
+.calculator__left-val_item input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* для мозилы  */
+.calculator__left-val_item input[type="number"] {
+    -moz-appearance: textfield;
+  }
+  .calculator__left-val_item input[type="number"]:hover,
+  .calculator__left-val_item input[type="number"]:focus {
+    -moz-appearance: number-input;
+  }
+  
+.calculator__left-val_item p {
+    font-weight: 200;
+    font-size: 16px;
+    line-height: 19px;
+}
+/* кнопка   */
+.calculator__left-val_btn {
+    min-width: 122px;
+    padding: 10px 12px;
+    background: #FFD200;
+    border: 1px solid #FFD200;
+    border-radius: 5px;
+    text-align: center;
+    margin-top: 30px;
+    font-size: 16px;
+    color: rgb(8 8 8 / 55%);
+    cursor: pointer;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+
+/* скываем и показываем блоки доллары и рубли */
+
+.calculator__left-val {
+    display: none;
+}
+.calculator__left-val_active {
+    display: block;
+}
+/* ================= */
+
+
+/* //// */
+
+.calculator__right {
+    margin-left: 26px;
+}
+.calculator__right-block {
+    display: flex;
+    align-items: center;
+    margin-bottom: 23px;
+}
+.calculator__right-block .prompt {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 9px;
+    font-size: 10px;
+    min-width: 15px;
+    height: 15px;
+    cursor: pointer;
+    background: #FECC00;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+}
+.calculator__right-block p {
+    margin-left: 9px;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 17px;
+}
+.calculator__right-block p b {
+    font-size: 16px;
+    line-height: 19px;
+}
+.calculator__right-block .calculator__right-block_st {
+    margin-left: 0;
+    margin-right: 10px;
+}
+.calculator__right-btn_grup {
+    display: flex;
+    min-width: 95px;
+    overflow: hidden;
+    /* background: #E4E4E4; */
+    border: none;
+    border-radius: 5px;
+}
+.calculator__right-btn {
+    padding: 8px 10px;
+    border: 0.5px solid #D1D1D1;
+    background: #E4E4E4;
+    width: 47px;
+    font-size: 14px;
+    line-height: 17px;
+    text-align: center;
+    color: #C1C1C1;
+    cursor: pointer;
+}
+
+
+.right-btn-prise {
+    background: #FFFFFF;
+    border: 1px solid #D9DADA;
+    border-radius: 50px;
+    font-weight: 200;
+    font-size: 16px;
+    line-height: 19px;
+    text-align: center;
+    min-width: 132px;
+    padding: 9px 16px;
+    margin-left: 20px;
+    margin-right: 21px;
+    cursor: pointer;
+    outline: none;
+}
+.right-btn-prise_active {
+    background: #FFD200;
+    border: 1px solid #FFD200;
+}
+
+
+
+.calculator__right-btn_active {
+    color: #000;
+    background: #FECC00;
+    border: 0.5px solid #FECC00;
+}
+
+  /* ===  скыть или отобразить блок === */
+    .calculator__right-block_hidden-1 {
+        display: none;
+} 
+ /* ===  скыть или отобразить блок === */
+ .calculator__right-block_hidden {
+     position: relative;
+ }
+.calculator__right-block_hover-1 {
+    background: #FFFFFF;
+    border: 0.5px solid #D3D3D3;
+    box-sizing: border-box;
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+    padding: 21px 8px 16px 36px;
+    width: 287px;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 22px;
+    position: absolute;
+    top: -3px;
+    right: -15px;
+
+    top: 0px;
+    right: -20px;
+    display: none;
+}
+.calculator__right-block_hover-1:before {
+    content: '';
+    width: 0;
+    height: 0;
+    right: 100%;
+    top: calc(50% - 8px) ;
+    position: absolute;
+    border-top: 8px solid transparent;
+    border-right: 8px solid #ffffff;
+    border-bottom: 8px solid transparent;
+
+    filter: drop-shadow(-2px 0px 1px rgba(0, 0, 0, 0.15));
+}
+
+.calculator__right-block_hover-2 {
+    background: #FFFFFF;
+    border: 0.5px solid #D3D3D3;
+    box-sizing: border-box;
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+    padding: 21px 8px 16px 36px;
+    width: 287px;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 22px;
+    position: absolute;
+    top: 119px;
+    right: -94px;
+    display: none;
+}
+.calculator__right-block_hover-2:before {
+    content: '';
+    width: 0;
+    height: 0;
+    right: 100%;
+    top: calc(50% - 8px) ;
+    position: absolute;
+    border-top: 8px solid transparent;
+    border-right: 8px solid #ffffff;
+    border-bottom: 8px solid transparent;
+
+    filter: drop-shadow(-2px 0px 1px rgba(0, 0, 0, 0.15));
+}
+
+.calculator__right-block_hover-1 li {
+    color: #FECC00;
+}
+.calculator__right-block_hover-2 li {
+    color: #FECC00;
+}
+
+.prompt:hover  {
+    color: rgb(255, 255, 255);
+}
+
+  /* ====== mortgage ======= */
+
+.mortgage {
+    margin: 46px 0;
+}
+.mortgage-block {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -15px;
+}
+.mortgage-block__item {
+    width: 455px;
+    min-height: 270px;
+    padding: 25px 10px 16px 48px;
+    background: #EFF1F1;
+    border-radius: 5px;
+    margin: 0 14px 25px;
+}
+
+.underlined-h2 {
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 22px;
+    text-transform: uppercase;
+}  
+.underlined-hr {
+    width: 100px;
+    height: 5px;
+    background: #FFD200;
+    border: none;
+    margin: 8px 0 16px;
+}
+.mortgage-block__item ul {
+    padding-left: 16px;
+ }
+.mortgage-block__item li {
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 22px;
+    color: #FFD200;
+}
+.mortgage-block__item p {
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 22px;
+    color: #FF0000;
+    margin: 13px 0 0px;
+}
+
+/* ====== Медиа 1450px ====== */
+@media (max-width: 1450px) {
+    .mortgage-block__item {
+        margin: 0 15px 25px;
+    }
+    .mortgage-block {
+        justify-content: center;
+    }
+}
+/* ====== Медиа 1450px /====== */
+
+
+/* ====== Медиа 1400px ====== */
+@media (max-width: 1400px) {
+    .calculator__left {
+        width: 44%;
+    }
+    .calculator__right-block_hover-2 {
+        top: 214px;
+        right: 0px;
+        left: 261px;
+    }
+    .calculator__right-block_hover-2:before {
+        content: '';
+        width: 0;
+        height: 0;
+        right: calc(50% - 8px) ;
+        top: -16px;
+        position: absolute;
+        border-right: 8px solid transparent;
+        border-bottom: 8px solid #ffffff;
+        border-left: 8px solid transparent;
+    
+        filter: drop-shadow(0px -2px 1px rgba(0, 0, 0, 0.15));
+    }
+}
+/* ====== Медиа 1400px /====== */
+
+/* ====== Медиа 1300px ====== */
+@media (max-width: 1300px) {
+    .calculator__left {
+        width: 50%;
+    }
+    .right-btn-prise {
+        margin-right: 0px;
+    }
+    .calculator__right-block_hover-1 {
+        top: 95px;
+        right: 0;
+        left: 189px;
+    }
+
+    .calculator__right-block_hover-1:before {
+        content: '';
+        width: 0;
+        height: 0;
+        right: calc(50% - 8px) ;
+        top: -16px;
+        position: absolute;
+        border-right: 8px solid transparent;
+        border-bottom: 8px solid #ffffff;
+        border-left: 8px solid transparent;
+    
+        filter: drop-shadow(0px -2px 1px rgba(0, 0, 0, 0.15));
+    }
+}
+/* ====== Медиа 1300px /====== */
+
+/* ====== Медиа 1200px ====== */
+@media (max-width: 1200px) {
+    .calculator {
+        display: block;
+    }
+    .calculator__left {
+        width: 100%;
+        margin-bottom: 70px;
+        border: none;
+    }
+    /* ///// */
+    .calculator__right {
+        margin-left: 0;
+        
+    }
+    .calculator__left-val_item input[value] {
+        padding-left: 5px;
+    }
+}
+/* ====== Медиа 1200px /====== */
+
+/* ====== Медиа 768px ====== */
+@media (max-width: 768px) {
+    .calculator {
+        padding: 28px 20px 34px;
+    }
+    .calculator__left-top-btn_grup {
+        margin-right: 0;
+    }
+
+    .calculator__right-block_rote {
+        display: block;
+    }
+    .calculator__right-block .calculator__right-block_st {
+        margin-left: 0;
+        margin-right: 10px;
+        margin-bottom: 22px;
+    }
+    .right-btn-prise {
+        margin-left: 0px;
+        margin-right: 12px;
+    }
+    .calculator__right-block_hover-2 {
+        top: 275px;
+        left: 261px;
+    }
+    .mortgage-block {
+        margin: 0;
+    }
+}
+/* ====== Медиа 768px /====== */
+
+/* ====== Медиа 600px ====== */
+@media (max-width: 600px) {
+    .calculator__right-block_hover-2 {
+        top: 275px;
+        left: 108px;
+    }
+
+}
+/* ====== Медиа 600px /====== */
+
+
+/* ====== Медиа 530px ====== */
+@media (max-width: 530px) {
+    .calculator {
+        padding: 28px 15px 34px;
+    }
+    .left-top-btn {
+        margin-right: 8px;
+    }
+    .calculator__left-top-text {
+        width: 180px;
+    }
+    .calculator__left-val_item h2 {
+        width: 180px;
+    }
+    .right-btn-prise {
+        display: block;
+        margin: 0 12px 12px 0;
+    }
+    .calculator__right-block_hover-1 {
+        top: -94px;
+        left: 110px;
+    }
+    .calculator__right-block_hover-2 {
+        top: 195px;
+        left: 108px;
+    }
+    .mortgage-block__item {
+        margin: 0 0px 25px;
+    }
+    .calculator__right-block_hover-1:before {
+        content: '';
+        width: 0;
+        height: 0;
+        right: calc(50% - 8px);
+        top: 146px;
+        position: absolute;
+        border-bottom: none;
+        border-right: 8px solid transparent;
+        border-top: 8px solid #ffffff;
+        border-left: 8px solid transparent;
+        filter: drop-shadow(0px 2px 1px rgba(0, 0, 0, 0.15));
+    }
+    .calculator__right-block_hover-2:before {
+        content: '';
+        width: 0;
+        height: 0;
+        right: calc(50% - 8px);
+        top: 146px;
+        position: absolute;
+        border-bottom: none;
+        border-right: 8px solid transparent;
+        border-top: 8px solid #ffffff;
+        border-left: 8px solid transparent;
+        filter: drop-shadow(0px 2px 1px rgba(0, 0, 0, 0.15));
+    }
+    
+}
+/* ====== Медиа 530px /====== */
+
+/* ====== Медиа 470px ====== */
+@media (max-width: 470px) {
+    .calculator__right-block_hover-2 {
+        top: 180px;
+        left: 108px;
+    }
+}
+/* ====== Медиа 470px /====== */
+
+/* ====== Медиа 450px ====== */
+@media (max-width: 450px) {
+    .title-h2 {
+        font-size: 28px;
+        margin-bottom: 15px;
+    }
+    .calculator {
+        padding: 28px 15px 34px;
+    }
+    .calculator__left-top-text {
+        font-size: 14px;
+    }
+    .left-top-btn {
+        margin-right: 8px;
+        font-size: 14px;
+        min-width: 120px;
+        padding: 7px 9px;
+    }
+    .calculator__left-top-text {
+        width: 180px;
+    }
+    .calculator__left-val_item h2 {
+        width: 150px;
+        font-size: 14px;
+        line-height: 17px;
+    }
+    .calculator__left-val_item input {
+        width: 70px;
+        height: 40px;
+        margin-right: 15px;
+        border: 1px solid #D9DADA;
+        border-radius: 5px;
+    }
+    .calculator__left-val_item p {
+        font-size: 14px;
+        line-height: 17px;
+    }
+    .calculator__right-block_hover-1 {
+        top: -100px;
+        left: 30px;
+    }
+    .calculator__right-block_hover-2 {
+        top: 180px;
+        left: 28px;
+    }
+    .mortgage-block__item {
+        padding: 25px 10px 16px 20px;
+    }
+    
+}
+/* ====== Медиа 450px /====== */
+
+/* ====== Медиа 370px ====== */
+@media (max-width: 370px) {
+    .container-ogr {
+        padding: 0;
+    }
+    .title-h2 {
+        font-size: 28px;
+        padding-left: 15px;
+    }
+    .calculator {
+        padding: 15px 10px 30px;
+    }
+    .left-top-btn {
+        margin-right: 5px;
+        font-size: 14px;
+        min-width: 116px;
+    }
+    .calculator__left-val_btn {
+        padding: 8px 12px;
+        margin-top: 20px;
+    }
+    .container-mortgage {
+        padding: 0 7px
+    }
+   
+    .calculator__right-block_hover-2 {
+        top: 180px;
+        left: 10px;
+    }
+    .mortgage-block__item {
+        padding: 25px 10px 16px 20px;
+    }
+    .calculator__right-block_hover-1 {
+        top: -100px;
+        left: 10px;
+    }
+}
+/* ====== Медиа 370px /====== */
+
